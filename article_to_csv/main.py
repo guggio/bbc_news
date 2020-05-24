@@ -1,4 +1,4 @@
-from article_csv_parser import ArticleCSVParser
+from article_to_csv.article_csv_parser import ArticleCSVParser
 
 if __name__ == "__main__":
     genre_list = ['business', 'entertainment', 'politics', 'sport', 'tech']
