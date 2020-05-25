@@ -11,6 +11,8 @@ data_dir = Path('..', 'generated_data')
 
 # create a path variable to the data set and read the data
 data_path = Path(data_dir, 'bbc_articles.csv')
+
+# the data is stored in a tab-separated values file, we need '\t' as the separator
 df = pd.read_csv(data_path, sep='\t')
 
 # select the wanted columns
