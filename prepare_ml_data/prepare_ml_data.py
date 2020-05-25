@@ -9,11 +9,11 @@ def create_absolute_path(*paths):
     return os.path.abspath(paths)
 
 
-# first create a path variable to access the data and save the train and test files
+# First create a path variable to access the data and save the train and test files
 # Due to my file structure I use '..' to go back one level (to the main project level)
 # in order to access my generated_data folder.
 # In this directory I store my main data set and want to use it to store my train and test set.
-data_dir = create_absolute_path('..', 'generated_data')
+data_dir = os.path.abspath(os.path.join('..', 'generated_data'))
 
 # create a path variable to the data set and read the data
 data_path = create_absolute_path(data_dir, 'bbc_articles.csv')
