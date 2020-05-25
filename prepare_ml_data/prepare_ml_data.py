@@ -17,9 +17,6 @@ df = pd.read_csv(data_path, sep='\t')
 
 # select the wanted columns
 df_text_genre = df[['text', 'genre']]
-# shuffle the rows. This is necessary since the rows are grouped by genre and this could lead to genre imbalances
-# in the train or test set.
-df_text_genre = df_text_genre.sample(frac=1).reset_index(drop=True)
 
 # split the data into train and test set
 train, test = train_test_split(df_text_genre, test_size=0.2, random_state=42, shuffle=True)
