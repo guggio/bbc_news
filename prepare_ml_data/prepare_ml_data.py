@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 data_dir = Path('..', 'generated_data')
 
 # create a path variable to the data set and read the data
-data_path = Path(data_dir, 'bbc_articles.csv')
+data_path = Path(data_dir, 'bbc_articles.tsv')
 
 # the data is stored in a tab-separated values file, we need '\t' as the separator
 df = pd.read_csv(data_path, sep='\t')
@@ -26,5 +26,6 @@ train_path = Path(data_dir, 'train.tsv')
 test_path = Path(data_dir, 'test.tsv')
 
 # save the train and test file
+# again using the '\t' separator to create tab-separated-values files
 train.to_csv(train_path, sep='\t', index=False)
 test.to_csv(test_path, sep='\t', index=False)
